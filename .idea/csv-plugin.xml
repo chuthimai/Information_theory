@@ -3,13 +3,6 @@
   <component name="CsvFileAttributes">
     <option name="attributeMap">
       <map>
-        <entry key="/ FITSP23B21DCCN082CNDHW0101/Health_Monitor_Dataset_CSV.csv">
-          <value>
-            <Attribute>
-              <option name="separator" value="," />
-            </Attribute>
-          </value>
-        </entry>
         <entry key="/ FITSP23B21DCCN082CNDHW0101/data.csv">
           <value>
             <Attribute>

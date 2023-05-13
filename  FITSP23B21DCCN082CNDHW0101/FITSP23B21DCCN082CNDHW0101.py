@@ -9,9 +9,9 @@ import numpy as np
 from queue import Queue
 
 data = pd.read_csv("data.csv")
-features = ["Temperature", "Heart Rate", "Pulse", "BPSYS", "BPDIA", "Respiratory Rate", "Oxygen Saturation", "PH", "Type"]
-standard = {"Temperature": [98, 100], "Heart Rate": [60, 99], "Pulse": [60, 99], "BPSYS": [90, 120], "BPDIA": [60, 80], "Respiratory Rate": [12, 16], "Oxygen Saturation": [0.95, 1], "PH": [7.3, 7.5]}
-
+# features = ["Temperature", "Heart Rate", "Pulse", "BPSYS", "BPDIA", "Oxygen Saturation", "PH", "Type"]
+standard = {"Temperature": [98, 100], "Heart Rate": [60, 99], "Pulse": [60, 99], "BPSYS": [90, 120], "BPDIA": [60, 80], "Oxygen Saturation": [0.95, 1], "PH": [7.3, 7.5]}
+features = data.keys()
 data = data[features]
 
 reference_type = {0: "Normal", 1: "Mild", 2: "Severe", 3: "Chronic 1", 4: "Chronic 2", 5: "Chronic 3"}
@@ -30,8 +30,6 @@ class Node:
 
     def process_elements(self):
         self.n = len(self.data)
-        if self.n == 0:
-            return
         count = self.data["Type"].value_counts()
         for i in range(0, 6):
             try:
@@ -97,13 +95,20 @@ def create_tree(plan):
         up = standard[name][1]
         node.yes.data = node.data[(node.data[name]>=down) & (node.data[name]<=up)]
         node.no.data = node.data[(node.data[name]<down) | (node.data[name]>up)]
-        node.yes.process_elements()
-        node.no.process_elements()
-        queue.put(node.yes)
-        queue.put(node.no)
+        if len(node.yes.data) == 0:
+            node.yes = None
+        else:
+            node.yes.process_elements()
+            queue.put(node.yes)
+        if len(node.no.data) == 0:
+            node.no = None
+        else:
+            node.no.process_elements()
+            queue.put(node.no)
 
     return tree
 
-tree = create_tree(['Temperature', 'Heart Rate', 'Pulse'])
 
+# tree = create_tree(all_choices()[0][: 4])
+print(data.corr().to_string())
 
