@@ -11,7 +11,6 @@ H = [[1, 0, 1, 1, 1, 0, 0],
      [0, 0, 1, 0, 1, 1, 1]]
 rows = len(H)
 columns = len(H[0])
-mark = [0 for i in range(0, columns)]
 
 
 def is_zero(arr):
@@ -104,10 +103,10 @@ def all_codes():
     code = [0 for i in range(0, columns)]
     while code != -1:
         if check_correct_code(code):
-            codes.append(code)
-            print(code)
-            code = binary_generation(code)
+            codes.append(code.copy())
+        code = binary_generation(code)
     return codes
 
-all_codes()
+print(all_codes())
+
 
