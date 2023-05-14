@@ -11,6 +11,7 @@ H = [[1, 0, 1, 1, 1, 0, 0],
      [0, 0, 1, 0, 1, 1, 1]]
 rows = len(H)
 columns = len(H[0])
+c = [1, 1, 0, 1, 0, 0, 0]
 
 
 def is_zero(arr):
@@ -107,6 +108,43 @@ def all_codes():
         code = binary_generation(code)
     return codes
 
-print(all_codes())
+
+def different(code1, code2):
+    diff = 0
+    for i in range(0, columns):
+        if code1[i] != code2[i]:
+            diff += 1
+    return diff
+
+
+# Tìm dmin theo định nghĩa
+def find_d_min_by_definition(codes):
+    size_of_all_codes = len(codes)
+    d_min = columns
+    for i in range(0, size_of_all_codes):
+        for j in range(i+1, size_of_all_codes):
+            diff = different(codes[i], codes[j])
+            if diff < d_min:
+                d_min = diff
+    return d_min
+
+
+# Tìm dmin theo tính chất của mã khối tuyến tính
+def find_d_min_by_property(codes):
+    d_min = columns
+    for code in codes:
+        w = sum(code)
+        if w < d_min and w != 0:
+            d_min = w
+    return d_min
+
+
+all_of_code = all_codes()
+print(f"Tìm dmin dựa theo số cột của ma trận kiểm tra H: dmin = {find_dmin()}")
+print(f"Kiểm tra vec-tơ c = {c} có phải là một vec-tơ mã hợp lệ không? {check_correct_code(c)}")
+print(f"Các từ mã cho bộ mã là: {all_of_code}")
+print(f"Tìm dmin theo định nghĩa: dmin = {find_d_min_by_definition(all_of_code)}")
+print(f"Tìm dmin theo tính chất của mã khối tuyến tính: dmin = {find_d_min_by_property(all_of_code)}")
+
 
 
