@@ -34,8 +34,8 @@ Griesmer = []
 
 fig0 = plt.figure("Đồ thị giới hạn Griesmer")
 ax0 = plt.axes(projection="3d")
-for i in range(0, 16):
-    for j in range(0, i+1):
+for i in range(0, 100):
+    for j in range(0, 100):
         k0.append(i)
         d0.append(j)
         Griesmer.append(Griesmer_limit(i, j))
@@ -55,8 +55,8 @@ Plotkin = []
 
 fig1 = plt.figure("Đồ thị giới hạn Plotkin")
 ax1 = plt.axes(projection="3d")
-for i in range(1, 16):
-    for j in range(i, 16):
+for i in range(1, 100):
+    for j in range(i, 100):
         k1.append(i)
         n1.append(j)
         Plotkin.append(Plotkin_limit(j, i))
@@ -76,7 +76,7 @@ Hamming = []
 
 fig2 = plt.figure("Đồ thị giới hạn Hamming")
 ax2 = plt.axes(projection="3d")
-for i in range(1, 16):
+for i in range(1, 100):
     for j in range(1, i+1):
         n2.append(i)
         t2.append(cal_t(j))
