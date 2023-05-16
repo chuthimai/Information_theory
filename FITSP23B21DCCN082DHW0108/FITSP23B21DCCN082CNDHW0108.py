@@ -25,7 +25,7 @@ def draw_pqr():
         r.append(1 - a - b)
         entropy = Entropy(a, b, 1 - a - b)
         H.append(entropy)
-        print(f"(p, q, r) = ({a}, {b}, {1-a-b}) => H = {entropy}")
+        # print(f"(p, q, r) = ({a}, {b}, {1-a-b}) => H = {entropy}")
 
     fig = plt.figure("Đồ thị tập giá trị kết quả theo p, q, r")
     p = np.array(p)
@@ -42,14 +42,14 @@ def Hp0_max(p0):
     p = 1
     q = 1
     H = []
-    print(f"Với r = {p0} ta có (p, q, H):")
+    # print(f"Với r = {p0} ta có (p, q, H):")
     for i in range(0, 100):
         while p > 1-p0:
             p = rd.random()
         q = 1-p0-p
         entropy = Entropy(p, q, p0)
         H.append(entropy)
-        print(f"({p}, {q}, {entropy})", end=" ")
+        # print(f"({p}, {q}, {entropy})", end=" ")
     return max(H)
 
 
