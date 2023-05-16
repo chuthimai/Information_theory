@@ -10,6 +10,41 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="$USER_HOME$/Library/Python/3.8/lib/python/site-packages/numpy/random/tests/data/mt19937-testset-1.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Library/Python/3.8/lib/python/site-packages/numpy/random/tests/data/pcg64-testset-2.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Library/Python/3.8/lib/python/site-packages/numpy/random/tests/data/pcg64dxsm-testset-2.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Library/Python/3.8/lib/python/site-packages/numpy/random/tests/data/philox-testset-1.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Library/Python/3.8/lib/python/site-packages/numpy/random/tests/data/philox-testset-2.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
       </map>
     </option>
   </component>
