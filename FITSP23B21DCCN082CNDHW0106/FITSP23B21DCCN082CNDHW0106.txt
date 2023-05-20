@@ -1,0 +1,163 @@
+# Test case 01
+
+Input
+k = 4
+n = 7
+
+Output
+Tất cả các đa thức tối giản bậc 4 là:
+1 + x + x^4
+1 + x^3 + x^4
+1 + x + x^2 + x^3 + x^4
+Phân tích x^7+1 thành các nhân tử tối giản
+1 + x^7 = ( 1 + x ) * ( 1 + x + x^3 ) * ( 1 + x^2 + x^3 )
+Các ước số phân biệt của x^7+1 là:
+1
+1 + x
+1 + x + x^3
+1 + x^2 + x^3
+1 + x + x^2 + x^4
+1 + x^2 + x^3 + x^4
+1 + x + x^2 + x^3 + x^4 + x^5 + x^6
+1 + x^7
+
+
+# Test case 02
+
+Input
+k = 7
+n = 10
+
+Ouput
+Tất cả các đa thức tối giản bậc 7 là:
+1 + x + x^7
+1 + x^3 + x^7
+1 + x^4 + x^7
+1 + x^6 + x^7
+1 + x + x^2 + x^3 + x^7
+1 + x + x^2 + x^5 + x^7
+1 + x + x^3 + x^5 + x^7
+1 + x + x^3 + x^6 + x^7
+1 + x + x^4 + x^6 + x^7
+1 + x^2 + x^3 + x^4 + x^7
+1 + x^2 + x^4 + x^6 + x^7
+1 + x^2 + x^5 + x^6 + x^7
+1 + x^3 + x^4 + x^5 + x^7
+1 + x^4 + x^5 + x^6 + x^7
+1 + x + x^2 + x^3 + x^4 + x^5 + x^7
+1 + x + x^2 + x^3 + x^5 + x^6 + x^7
+1 + x + x^2 + x^4 + x^5 + x^6 + x^7
+1 + x^2 + x^3 + x^4 + x^5 + x^6 + x^7
+Phân tích x^10+1 thành các nhân tử tối giản:
+1 + x^10 = ( 1 + x + x^2 + x^3 + x^4 )^2
+Các ước số phân biệt của x^10+1 là:
+1
+1 + x^5
+1 + x + x^5 + x^6
+1 + x + x^2 + x^3 + x^4
+1 + x^2 + x^4 + x^6 + x^8
+1 + x + x^2 + x^3 + x^4 + x^5 + x^6 + x^7 + x^8 + x^9
+1 + x^10
+
+
+# Test case 03
+
+Input
+k = 5
+n = 15
+
+Output
+Tất cả các đa thức tối giản bậc 5 là:
+1 + x^2 + x^5
+1 + x^3 + x^5
+1 + x + x^2 + x^3 + x^5
+1 + x + x^2 + x^4 + x^5
+1 + x + x^3 + x^4 + x^5
+1 + x^2 + x^3 + x^4 + x^5
+Phân tích x^15+1 thành các nhân tử tối giản:
+1 + x^15 = ( 1 + x + x^2 )^2 * ( 1 + x + x^4 ) * ( 1 + x^3 + x^4 ) * ( 1 + x + x^2 + x^3 + x^4 )
+Các ước số phân biệt của x^15+1 là:
+1
+1 + x^3
+1 + x^5
+1 + x + x^2
+1 + x + x^4
+1 + x^3 + x^4
+1 + x + x^3 + x^5
+1 + x + x^3 + x^7
+1 + x^2 + x^4 + x^5
+1 + x^4 + x^6 + x^7
+1 + x + x^2 + x^3 + x^4
+1 + x + x^2 + x^3 + x^6
+1 + x + x^2 + x^4 + x^8
+1 + x^2 + x^3 + x^4 + x^6
+1 + x^3 + x^4 + x^5 + x^6
+1 + x^3 + x^6 + x^9 + x^12
+1 + x^4 + x^6 + x^7 + x^8
+1 + x + x^2 + x^5 + x^6 + x^7
+1 + x + x^4 + x^5 + x^6 + x^9
+1 + x + x^5 + x^6 + x^10 + x^11
+1 + x^2 + x^3 + x^6 + x^7 + x^9
+1 + x^3 + x^4 + x^5 + x^8 + x^9
+1 + x + x^2 + x^4 + x^5 + x^8 + x^10
+1 + x + x^3 + x^4 + x^5 + x^7 + x^8
+1 + x^2 + x^5 + x^6 + x^8 + x^9 + x^10
+1 + x + x^2 + x^3 + x^5 + x^7 + x^8 + x^11
+1 + x^3 + x^4 + x^6 + x^8 + x^9 + x^10 + x^11
+1 + x + x^3 + x^4 + x^6 + x^7 + x^9 + x^10 + x^12 + x^13
+1 + x + x^2 + x^3 + x^4 + x^5 + x^6 + x^7 + x^8 + x^9 + x^10 + x^11 + x^12 + x^13 + x^14
+1 + x^15
+
+
+# Test case 04
+
+Input
+k = 3
+n = 6
+
+Output
+Tất cả các đa thức tối giản bậc 3 là:
+1 + x + x^3
+1 + x^2 + x^3
+Phân tích x^6+1 thành các nhân tử tối giản:
+1 + x^6 = ( 1 + x )^2 * ( 1 + x + x^2 )^2
+Các ước số phân biệt của x^6+1 là:
+1
+1 + x
+1 + x^2
+1 + x^3
+1 + x + x^2
+1 + x^2 + x^4
+1 + x + x^3 + x^4
+1 + x + x^2 + x^3 + x^4 + x^5
+1 + x^6
+
+
+# Test case 05
+
+Input
+k = 6
+n = 4
+
+Output
+Tất cả các đa thức tối giản bậc 6 là:
+1 + x + x^6
+1 + x^3 + x^6
+1 + x^5 + x^6
+1 + x + x^2 + x^4 + x^6
+1 + x + x^2 + x^5 + x^6
+1 + x + x^3 + x^4 + x^6
+1 + x + x^4 + x^5 + x^6
+1 + x^2 + x^3 + x^5 + x^6
+1 + x^2 + x^4 + x^5 + x^6
+Phân tích x^4+1 thành các nhân tử tối giản:
+1 + x^4 = ( 1 + x )^4
+Các ước số phân biệt của x^4+1 là:
+1
+1 + x
+1 + x^2
+1 + x + x^2 + x^3
+1 + x^4
+
+
+
